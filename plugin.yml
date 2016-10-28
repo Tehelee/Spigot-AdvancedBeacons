@@ -1,0 +1,45 @@
+name: AdvancedBeacons
+main: com.tehelee.beacons.Main
+version: 1.10.2c
+
+load: STARTUP
+
+commands:
+  beacon:
+    description: main command
+    usage: /beacon help
+    aliases: [bcn]
+
+permissions:
+  permissions.beacons.*:
+    description: Gives access to all AdvancedBeacon commands
+    default: op
+    children:
+      permissions.beacons.spawn: true
+      permissions.beacons.merchant: true
+      permissions.beacons.info: true
+      permissions.beacons.give: true
+      permissions.beacons.set: true
+      permissions.beacons.config: true
+      permissions.beacons.reload: true
+  permissions.beacons.spawn:
+    description: Allows you to spawn a beacon
+    default: op
+  permissions.beacons.merchant:
+    description: Allows you to create a beacon merchant
+    default: op
+  permissions.beacons.info:
+    description: Allows you to debug a beacon
+    default: op
+  permissions.beacons.give:
+    description: Allows you to give AdvancedBeacons
+    default: op
+  permissions.beacons.set:
+    description: Allows you to change beacon attributes
+    default: op
+  permissions.beacons.config:
+    description: Allows you to configure AdvancedBeacons
+    default: op
+  permissions.beacons.reload:
+    description: Allows you to reload the configuration file
+    default: op
